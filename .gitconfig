@@ -1,0 +1,37 @@
+[include]
+  path = ~/.gitconfig.local
+[user]
+  name = Karolis Stasaitis
+  email = stkarolis@gmail.com
+[core]
+  excludesfile = ~/.gitignore.global
+  ignorecase = false
+[push]
+  default = upstream
+[merge]
+  tool = opendiff
+[diff]
+  tool = vimdiff
+[mergetool]
+  prompt = false
+[difftool]
+  prompt = false
+[credential]
+  helper = osxkeychain
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  repull = pull --rebase
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  unstage = reset --
+
+  #commonly used
+  rpd = pull origin develop --rebase
+
+  #hub extensions
+  pr = pull-request
