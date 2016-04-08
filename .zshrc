@@ -57,11 +57,23 @@ if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
   . $LUNCHY_DIR/lunchy-completion.zsh
 fi
 
+### Exports
+export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
+
 ### Completions
 source /usr/local/share/zsh/site-functions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 ### Aliases
-alias git=hub
+
+# zsh
 alias reload-zsh="source ~/.zshrc"
-alias swift="/usr/bin/env DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun swift"
+
+# git
+alias git=hub
+
+# swift
+alias swift="/usr/bin/env xcrun swift"
+
+# xcode
+alias symbolicate="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash -v"
