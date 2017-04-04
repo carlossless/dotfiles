@@ -7,7 +7,7 @@
   excludesfile = ~/.gitignore.global
   ignorecase = false
 [push]
-  default = upstream
+  default = current
 [merge]
   tool = opendiff
 [diff]
@@ -32,6 +32,7 @@
 
   #commonly used
   rpd = pull origin develop --rebase
+  pu = push -u
 
   #hub extensions
   pr = pull-request

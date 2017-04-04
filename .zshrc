@@ -51,12 +51,6 @@ export GOPATH=~/.gocode
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-# lunchy - launchctl helper
-LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
-  . $LUNCHY_DIR/lunchy-completion.zsh
-fi
-
 ### Exports
 export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 
