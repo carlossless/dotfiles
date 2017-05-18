@@ -7,7 +7,7 @@
   excludesfile = ~/.gitignore.global
   ignorecase = false
 [push]
-  default = upstream
+  default = current
 [merge]
   tool = opendiff
 [diff]
@@ -18,6 +18,10 @@
   prompt = false
 [credential]
   helper = osxkeychain
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg
 [alias]
   co = checkout
   ci = commit
@@ -32,6 +36,12 @@
 
   #commonly used
   rpd = pull origin develop --rebase
+  pu = push -u
+  reset-one = git reset --hard "HEAD^"
 
   #hub extensions
   pr = pull-request
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true

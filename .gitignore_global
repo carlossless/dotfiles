@@ -7,3 +7,7 @@ xcuserdata
 
 # IntelliJ
 .idea/
+
+# Tern JS
+.tern-project
+
