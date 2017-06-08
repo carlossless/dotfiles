@@ -20,6 +20,9 @@ source "$SCRIPT_DIR/completions.zsh"
 source "$SCRIPT_DIR/aliases.zsh"
 source "$SCRIPT_DIR/utils.zsh"
 
+# python
+export PATH="$HOME/Library/Python/2.7/bin":$PATH
+
 # xcode
 export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 

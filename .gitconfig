@@ -37,7 +37,8 @@
   #commonly used
   rpd = pull origin develop --rebase
   pu = push -u
-  reset-one = git reset --hard "HEAD^"
+  reset-one = reset --hard "HEAD^"
+  bs = branch --sort=-committerdate
 
   #hub extensions
   pr = pull-request
