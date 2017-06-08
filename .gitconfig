@@ -22,6 +22,8 @@
   gpgsign = true
 [gpg]
   program = gpg
+[status]
+  submoduleSummary = true
 [alias]
   co = checkout
   ci = commit
