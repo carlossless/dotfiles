@@ -41,6 +41,8 @@
   pu = push -u
   reset-one = reset --hard "HEAD^"
   bs = branch --sort=-committerdate
+  release-date = !sh -c 'git tag release-$(date +%Y-%m-%d)'
+  release-datetime = !sh -c 'git tag release-$(date +%Y-%m-%d-%H-%M)'
 
   #hub extensions
   pr = pull-request
