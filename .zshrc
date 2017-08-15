@@ -24,7 +24,7 @@ source "$SCRIPT_DIR/utils.zsh"
 export PATH="$HOME/Library/Python/2.7/bin":$PATH
 
 # xcode
-export DEVELOPER_DIR="/Applications/Xcode-beta.app/Contents/Developer"
+export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 
 # nvm
 export NVM_DIR="/Users/mindw0rk/.nvm"

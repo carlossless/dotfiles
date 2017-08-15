@@ -39,7 +39,8 @@
   #commonly used
   rpd = pull origin develop --rebase
   pu = push -u
-  reset-one = reset --hard "HEAD^"
+  undo-commit = reset --hard "HEAD^"
+  stage-commit = reset --soft "HEAD^"
   bs = branch --sort=-committerdate
   release-date = !sh -c 'git tag release-$(date +%Y-%m-%d)'
   release-datetime = !sh -c 'git tag release-$(date +%Y-%m-%d-%H-%M)'
