@@ -29,3 +29,4 @@ export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 # nvm
 export NVM_DIR="/Users/mindw0rk/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+export PATH="/usr/local/sbin:$PATH"
