@@ -12,7 +12,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # PATH
-eval `/usr/libexec/path_helper -s`
+[ -f "/usr/libexec/path_helper" ] && eval `/usr/libexec/path_helper -s`
 
 # usability
 source "$SCRIPT_DIR/key_bindings.zsh"
