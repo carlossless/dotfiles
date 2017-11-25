@@ -24,6 +24,10 @@
   program = gpg
 [status]
   submoduleSummary = true
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [alias]
   co = checkout
   ci = commit
@@ -42,12 +46,16 @@
   undo-commit = reset --hard "HEAD^"
   stage-commit = reset --soft "HEAD^"
   bs = branch --sort=-committerdate
-  release-date = !sh -c 'git tag release-$(date +%Y-%m-%d)'
-  release-datetime = !sh -c 'git tag release-$(date +%Y-%m-%d-%H-%M)'
+
+  #releases
+  release-date = ! git tag release-$(date +%Y-%m-%d)
+  release-datetime = ! git tag release-$(date +%Y-%m-%d.%H-%M)
+  release-notes = log --color --graph --pretty=format:'%Cred%h%Creset %s %C(bold blue)(%an)%Creset' --abbrev-commit
+  release-tags = ! git tag --sort=-creatordate | grep 'release-'
+  last-release-tag = ! git release-tags | head -n 1
+  previous-release-tag = ! git release-tags | head -n 2 | tail -n 1
+  latest-release-notes = ! git release-notes "$(git previous-release-tag)".."$(git last-release-tag)"
 
   #hub extensions
   pr = pull-request
-[filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
-  required = true
+  purr = ! git pu & hub pull-request

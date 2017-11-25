@@ -56,3 +56,7 @@ set expandtab
 
 " General
 filetype plugin on
+set number
+highlight LineNr term=bold cterm=NONE ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+set laststatus=2
+set statusline=hi
