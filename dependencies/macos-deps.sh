@@ -28,4 +28,10 @@ command_absent? hub && brew install hub
 # Launch Control
 application_absent? LaunchControl && brew cask install LaunchControl
 
+# vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Fire Code
+brew tap caskroom/fonts && brew cask install font-fira-code
+
 return 0

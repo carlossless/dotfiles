@@ -18,10 +18,10 @@
   prompt = false
 [credential]
   helper = osxkeychain
-[commit]
-  gpgsign = true
-[gpg]
-  program = gpg
+# [commit]
+#   gpgsign = true
+# [gpg]
+#   program = gpg
 [status]
   submoduleSummary = true
 [filter "lfs"]
@@ -59,3 +59,4 @@
   #hub extensions
   pr = pull-request
   purr = ! git pu & hub pull-request
+	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
