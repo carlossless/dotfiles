@@ -23,6 +23,6 @@ function_absent? nvm && curl -o- https://raw.githubusercontent.com/creationix/nv
 function_absent? rvm && curl -sSL https://get.rvm.io | bash -s stable
 
 # vim-plug
-file_absent? "$HOME/.vim/autoload/plug.vim" && curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+file_absent? "$HOME/.vim/autoload/plug.vim" && curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && vim +PlugInstall +qall
 
 exit 0
