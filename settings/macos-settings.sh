@@ -20,6 +20,9 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 # Gatekeeper
 sudo spctl --master-disable
 
+# Sublime Text Key Repeat (for vi mode)
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+
 # Restart Finder
 killall Finder
 
