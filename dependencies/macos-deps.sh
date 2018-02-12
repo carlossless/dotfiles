@@ -56,14 +56,17 @@ application_absent? Sketch && brew cask install sketch
 # Skype
 application_absent? Skype && brew cask install skype
 
+# WhatsApp
+application_absent? WhatsApp && brew cask install whatsapp
+
+# Spotify
+application_absent? Spotify && brew cask install spotify
+
 # IRCCloud
 application_absent? IRCCloud && brew cask install irccloud
 
 # Tunnelblick
 application_absent? Tunnelblick && brew cask install tunnelblick
-
-# Fira Code
-font_absent? FiraCode-Regular.otf && brew tap caskroom/fonts && brew cask install font-fira-code
 
 # 1Password
 application_absent? 1Password && mas install 443987910
@@ -88,6 +91,9 @@ application_absent? Deliveries && mas install 924726344
 
 # Slack
 application_absent? Slack && mas install 803453959
+
+# Fira Code
+font_absent? FiraCode-Regular.otf && brew tap caskroom/fonts && brew cask install font-fira-code
 
 exit 0
 
