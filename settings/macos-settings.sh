@@ -8,10 +8,7 @@ set -o pipefail
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
 # Show full path in finder window titles
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
-
-# Restart Finder
-killall Finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Autocorrect
 defaults write -g NSAutomaticCapitalizationEnabled -bool false
@@ -22,3 +19,8 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Gatekeeper
 sudo spctl --master-disable
+
+# Restart Finder
+killall Finder
+
+exit 0
