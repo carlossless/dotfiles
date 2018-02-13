@@ -29,13 +29,13 @@ command_absent? youtube-dl && brew install youtube-dl
 # java
 command_absent? java && brew cask install java
 
-# hub
+# hub - github cli interface
 command_absent? hub && brew install hub
 
-# bfg
+# bfg - fast git repo cleaner
 command_absent? bfg && brew install bfg
 
-# mas
+# mas - cli for Mac App Store
 command_absent? mas && brew install mas
 
 # Launch Control
@@ -56,14 +56,17 @@ application_absent? Sketch && brew cask install sketch
 # Skype
 application_absent? Skype && brew cask install skype
 
+# IRCCloud
+application_absent? IRCCloud && brew cask install irccloud
+
+# Messenger (Facebook)
+application_absent? Messenger && brew cask install messenger
+
 # WhatsApp
 application_absent? WhatsApp && brew cask install whatsapp
 
 # Spotify
 application_absent? Spotify && brew cask install spotify
-
-# IRCCloud
-application_absent? IRCCloud && brew cask install irccloud
 
 # Tunnelblick
 application_absent? Tunnelblick && brew cask install tunnelblick
