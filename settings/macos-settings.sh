@@ -5,7 +5,7 @@ set -o pipefail
 
 # Finder Settings
 # Show hidden files
-defaults write com.apple.finder AppleShowAllFiles TRUE
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Show full path in finder window titles
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -17,6 +17,9 @@ defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Autohide dock
+defaults write com.apple.dock autohide -bool true
+
 # Gatekeeper
 sudo spctl --master-disable
 
@@ -25,5 +28,8 @@ defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
 # Restart Finder
 killall Finder
+
+# Restart Dock
+killall Dock
 
 exit 0

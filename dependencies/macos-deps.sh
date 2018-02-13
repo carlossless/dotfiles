@@ -38,6 +38,9 @@ command_absent? bfg && brew install bfg
 # mas - cli for Mac App Store
 command_absent? mas && brew install mas
 
+# docker
+application_absent? Docker && brew cask install docker
+
 # Launch Control
 application_absent? LaunchControl && brew cask install launchcontrol
 
@@ -56,8 +59,8 @@ application_absent? Sketch && brew cask install sketch
 # Skype
 application_absent? Skype && brew cask install skype
 
-# IRCCloud
-application_absent? IRCCloud && brew cask install irccloud
+# Textual
+application_absent? Textual && brew cask install textual
 
 # Messenger (Facebook)
 application_absent? Messenger && brew cask install messenger
@@ -70,6 +73,9 @@ application_absent? Spotify && brew cask install spotify
 
 # Tunnelblick
 application_absent? Tunnelblick && brew cask install tunnelblick
+
+# kicad
+application_absent? Kicad/kicad && brew cask install kicad
 
 # 1Password
 application_absent? 1Password && mas install 443987910
