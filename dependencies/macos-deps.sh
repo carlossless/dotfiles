@@ -47,6 +47,12 @@ application_absent? Docker && brew cask install docker
 # Launch Control
 application_absent? LaunchControl && brew cask install launchcontrol
 
+# Firefox
+application_absent? Firefox && brew cask install firefox
+
+# Google Chrome
+application_absent? "Google Chrome" && brew cask install google-chrome
+
 # UninstallPKG
 application_absent? UninstallPKG && brew cask install uninstallpkg
 
@@ -64,6 +70,15 @@ application_absent? Skype && brew cask install skype
 
 # Textual
 application_absent? Textual && brew cask install textual
+
+# Beamer
+application_absent? Beamer && brew cask install beamer
+
+# Paw
+application_absent? Paw && brew cask install paw
+
+# Dash
+application_absent? Dash && brew cask install dash
 
 # Messenger (Facebook)
 application_absent? Messenger && brew cask install messenger
