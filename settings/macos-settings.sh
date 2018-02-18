@@ -20,6 +20,9 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 # Autohide dock
 defaults write com.apple.dock autohide -bool true
 
+# Siri
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
 # Gatekeeper
 sudo spctl --master-disable
 

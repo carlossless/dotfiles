@@ -38,6 +38,9 @@ command_absent? bfg && brew install bfg
 # mas - cli for Mac App Store
 command_absent? mas && brew install mas
 
+# htop
+command_absent? htop && brew install htop
+
 # docker
 application_absent? Docker && brew cask install docker
 
@@ -76,6 +79,9 @@ application_absent? Tunnelblick && brew cask install tunnelblick
 
 # kicad
 application_absent? Kicad/kicad && brew cask install kicad
+
+# Bonjeff
+application_absent? Bonjeff && brew cask install bonjeff
 
 # 1Password
 application_absent? 1Password && mas install 443987910
