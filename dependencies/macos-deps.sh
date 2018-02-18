@@ -41,6 +41,9 @@ command_absent? mas && brew install mas
 # htop
 command_absent? htop && brew install htop
 
+# nmap
+command_absent? nmap && brew install nmap
+
 # docker
 application_absent? Docker && brew cask install docker
 
