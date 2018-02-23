@@ -83,6 +83,9 @@ application_absent? Paw && brew cask install paw
 # Dash
 application_absent? Dash && brew cask install dash
 
+# Trailer
+application_absent? Trailer && brew cask install trailer
+
 # Messenger (Facebook)
 application_absent? Messenger && brew cask install messenger
 
