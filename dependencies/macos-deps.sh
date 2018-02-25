@@ -44,6 +44,12 @@ command_absent? htop && brew install htop
 # nmap
 command_absent? nmap && brew install nmap
 
+# xquartz
+application_absent? "Utilities/XQuartz" && brew cask install xquartz
+
+# wine (depends on xquartz)
+command_absent? wine && brew install wine
+
 # docker
 application_absent? Docker && brew cask install docker
 

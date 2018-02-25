@@ -1,5 +1,5 @@
 # zsh
-alias reload-zsh="source ~/.zshrc"
+alias zsh-reload="source ~/.zshrc"
 
 # git
 alias git=hub

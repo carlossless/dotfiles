@@ -29,6 +29,6 @@ directory_absent? "$HOME/.cargo/bin" && curl https://sh.rustup.rs -sSf | sh
 file_absent? "$HOME/.vim/autoload/plug.vim" && curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && vim +PlugInstall +qall
 
 # dokku-client
-directory_absent? "$HOME/.dokku/bin" && git clone git@github.com:dokku/dokku.git "$HOME/.dokku"
+directory_absent? "$HOME/.dokku" && git clone git@github.com:dokku/dokku.git "$HOME/.dokku"
 
 exit 0
