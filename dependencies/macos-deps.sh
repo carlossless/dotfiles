@@ -110,6 +110,9 @@ application_absent? Kicad/kicad && brew cask install kicad
 # Bonjeff
 application_absent? Bonjeff && brew cask install bonjeff
 
+# Hopper
+application_absent? "Hopper Disassembler v4" && brew cask install hopper-disassembler
+
 # 1Password
 application_absent? 1Password && mas install 443987910
 
@@ -136,6 +139,10 @@ application_absent? Slack && mas install 803453959
 
 # Fira Code
 font_absent? FiraCode-Regular.otf && brew tap caskroom/fonts && brew cask install font-fira-code
+
+# Brew Cleanup
+brew cask cleanup
+brew cleanup
 
 exit 0
 

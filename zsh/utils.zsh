@@ -1,17 +1,17 @@
-DOTFILE_DIR="$(dirname "$(readlink "$HOME/.zshrc")")"
+_DOTFILE_DIR="$(dirname "$(readlink "$HOME/.zshrc")")"
 
 # dotfiles
 
 dotfiles-open () {
-    open "$DOTFILE_DIR"
+    open "$_DOTFILE_DIR"
 }
 
 dotfiles-edit () {
-    $EDITOR "$DOTFILE_DIR"
+    $EDITOR "$_DOTFILE_DIR"
 }
 
 dotfiles-deps () {
-    eval "$DOTFILE_DIR/dependencies.sh"
+    eval "$_DOTFILE_DIR/dependencies.sh"
 }
 
 # helper functions
