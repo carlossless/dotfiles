@@ -7,7 +7,7 @@ dotfiles-open () {
 }
 
 dotfiles-edit () {
-    $EDITOR "$_DOTFILE_DIR"
+    ${=EDITOR} "$_DOTFILE_DIR"
 }
 
 dotfiles-deps () {

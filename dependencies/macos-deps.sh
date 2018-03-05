@@ -104,6 +104,9 @@ application_absent? Spotify && brew cask install spotify
 # Tunnelblick
 application_absent? Tunnelblick && brew cask install tunnelblick
 
+# iStat Menus
+application_absent? "iStat Menus" && brew cask install istat-menus
+
 # kicad
 application_absent? Kicad/kicad && brew cask install kicad
 
