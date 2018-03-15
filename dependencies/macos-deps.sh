@@ -53,6 +53,9 @@ command_absent? wine && brew install wine
 # docker
 application_absent? Docker && brew cask install docker
 
+# Keka
+application_absent? Keka && brew cask install keka
+
 # Launch Control
 application_absent? LaunchControl && brew cask install launchcontrol
 
