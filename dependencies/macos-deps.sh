@@ -8,6 +8,10 @@ print_and_return () {
   return $1
 }
 
+tapped? () {
+  ! brew tap | grep "$1" > /dev/null || print_and_return $? "Command $1 found. Skipping."
+}
+
 command_absent? () {
   ! [ -x "$(command -v $1)" ] || print_and_return $? "Command $1 found. Skipping."
 }
@@ -19,6 +23,12 @@ application_absent? () {
 font_absent? () {
   ! [ -f "/Library/Fonts/$1" ] && ! [ -f "$HOME/Library/Fonts/$1" ] || print_and_return $? "Font $1 found. Skipping."
 }
+
+# osx-cross
+tapped? osx-cross/avr && brew tap osx-cross/avr
+
+# lsusb
+tapped? jlhonora/lsusb && brew tap jlhonora/lsusb
 
 # Homebrew
 command_absent? brew && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -43,6 +53,15 @@ command_absent? htop && brew install htop
 
 # nmap
 command_absent? nmap && brew install nmap
+
+# cowsay
+command_absent? cowsay && brew install cowsay
+
+# avr-gcc
+command_absent? avr-gcc && brew install avr-gcc
+
+# lsusb
+command_absent? lsusb && brew install lsusb
 
 # xquartz
 application_absent? "Utilities/XQuartz" && brew cask install xquartz

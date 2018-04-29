@@ -29,3 +29,6 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# gettext
+export PATH="/usr/local/opt/gettext/bin:$PATH"

@@ -25,6 +25,9 @@ directory_absent? "$HOME/.rvm" && curl -sSL https://get.rvm.io | bash -s stable
 # rustup
 directory_absent? "$HOME/.cargo/bin" && curl https://sh.rustup.rs -sSf | sh
 
+# jabba
+directory_absent? "$HOME/.jabba" && curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash
+
 # vim-plug
 file_absent? "$HOME/.vim/autoload/plug.vim" && curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && vim +PlugInstall +qall
 
