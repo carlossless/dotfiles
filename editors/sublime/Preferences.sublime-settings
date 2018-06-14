@@ -1,0 +1,14 @@
+{
+    "color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+    "font_face": "Fira Code",
+    "font_size": 12,
+    "ignored_packages":
+    [
+        "JavaScript",
+        "Vintage"
+    ],
+    "show_encoding": true,
+    "theme": "El Capitan.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "vintage_start_in_command_mode": true
+}

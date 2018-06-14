@@ -1,0 +1,27 @@
+{
+    "explorer.confirmDelete": false,
+    "rust.mode": "rls",
+    "workbench.iconTheme": "vscode-icons",
+    "rust.rustup": {
+        "toolchain": "nightly-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code",
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "explorer.openEditors.visible": 0,
+    "workbench.colorTheme": "An Old Hope",
+    "editor.scrollBeyondLastLine": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.tabSize": 2,
+    "editor.autoIndent": false,
+    "vim.autoindent": false,
+    "flow.useNPMPackagedFlow": true,
+    "editor.fontSize": 12
+}

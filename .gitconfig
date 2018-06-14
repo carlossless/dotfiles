@@ -65,3 +65,6 @@
   pr = pull-request
   purr = ! git pu & hub pull-request
 	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+
+  #heyjobs specific
+  prr = pull-request -l "ready for review" -a carlossless

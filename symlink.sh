@@ -12,7 +12,7 @@ delete_file () {
 
 check_and_delete () {
   if [ -f "$1" ] || [ -L "$1" ]; then
-    printf "$1 already exists.\n"
+    printf "\n$1 already exists.\n"
     read -p "Do you want to delete it? (y/N): " confirmation
     case "$confirmation" in
       [yY] | [yY][eE][sS]) delete_file "$1"; return 0 ;;
@@ -28,14 +28,39 @@ symlink_file() {
 }
 
 try_symlink () {
-  check_and_delete "$HOME/$1" && symlink_file "$SCRIPT_DIR/$1" "$HOME/$1"
-  printf "\n"
+  check_and_delete "$2" && symlink_file "$SCRIPT_DIR/$1" "$2" || return 0
+}
+
+try_home_symlink () {
+  if [ -z "$2" ]; then
+    try_symlink "$1" "$HOME/$1"
+  else
+    try_symlink "$1" "$HOME/$2"
+  fi
 }
 
 printf "Bootstrapping dotfiles\n\n"
 
-try_symlink ".zshrc"
-try_symlink ".vimrc"
-try_symlink ".gitconfig"
-try_symlink ".gitignore_global"
-try_symlink ".ssh/config"
+try_home_symlink ".zshrc"
+try_home_symlink ".gitconfig"
+try_home_symlink ".gitignore_global"
+try_home_symlink ".ssh/config"
+try_home_symlink "editors/.vimrc" ".vimrc"
+
+if [[ $(uname) == "Darwin" ]]; then
+  # vscode
+  if [ -d "$HOME/Library/Application Support/Code" ]; then
+    try_home_symlink "editors/vscode/settings.json" "Library/Application Support/Code/User/settings.json"
+    try_home_symlink "editors/vscode/keybindings.json" "Library/Application Support/Code/User/keybindings.json"
+  else
+    printf "Skipping vscode settings, '$HOME/Library/Application Support/Code' not found\n"
+  fi
+
+  # sublime text
+  if [ -d "$HOME/Library/Application Support/Sublime Text 3" ]; then
+    try_home_symlink "editors/sublime/Preferences.sublime-settings" "Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+    try_home_symlink "editors/sublime/Default (OSX).sublime-keymap" "Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+  else
+    printf "Skipping sublime settings, '$HOME/Library/Application Support/Sublime Text 3' not found\n"
+  fi
+fi
