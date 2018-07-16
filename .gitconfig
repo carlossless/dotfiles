@@ -1,8 +1,8 @@
 [include]
   path = ~/.gitconfig.local
 [user]
-  name = Karolis Stasaitis
-  email = stkarolis@gmail.com
+	name = Karolis Stasaitis
+	email = contact@carlossless.io
 [core]
   excludesfile = ~/.gitignore.global
   ignorecase = false
@@ -25,9 +25,10 @@
 [status]
   submoduleSummary = true
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
   required = true
+  process = git-lfs filter-process
 [alias]
   co = checkout
   ci = commit
@@ -64,7 +65,7 @@
   #hub extensions
   pr = ! hub pull-request
   purr = ! git pu & hub pull-request
-	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+  permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 
   #heyjobs specific
   prr = pull-request -l \"ready for review\" -a carlossless
