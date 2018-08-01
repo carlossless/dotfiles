@@ -45,7 +45,10 @@ try_home_symlink ".zshrc"
 try_home_symlink ".gitconfig"
 try_home_symlink ".gitignore_global"
 try_home_symlink ".ssh/config"
+try_home_symlink ".ssh/config.d"
 try_home_symlink "editors/.vimrc" ".vimrc"
+
+try_home_symlink "." "dotfiles" # needed for .gitconfig includeIf
 
 if [[ $(uname) == "Darwin" ]]; then
   # vscode

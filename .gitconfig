@@ -1,13 +1,14 @@
-[include]
-  path = ~/.gitconfig.local
 [user]
 	name = Karolis Stasaitis
 	email = contact@carlossless.io
+
 [core]
   excludesfile = ~/.gitignore.global
   ignorecase = false
+
 [push]
   default = current
+
 [merge]
   tool = opendiff
 [diff]
@@ -16,19 +17,10 @@
   prompt = false
 [difftool]
   prompt = false
-[credential]
-  helper = osxkeychain
-# [commit]
-#   gpgsign = true
-# [gpg]
-#   program = gpg
+
 [status]
   submoduleSummary = true
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  required = true
-  process = git-lfs filter-process
+
 [alias]
   co = checkout
   ci = commit
@@ -41,31 +33,35 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   unstage = reset --
 
-  #commonly used
+  # commonly used
   rpd = pull origin develop --rebase
   pu = push -u
   undo-commit = reset --hard "HEAD^"
   stage-commit = reset --soft "HEAD^"
   bs = branch --sort=-committerdate
 
-  #releases
-  release-date = ! git tag release-$(date +%Y-%m-%d)
-  release-datetime = ! git tag release-$(date +%Y-%m-%d.%H-%M)
-  release-notes = log --color --graph --pretty=format:'%h %s (%an)' --abbrev-commit
-  readable-release-notes = log --color --graph --pretty=format:'%Cred%h%Creset %s %C(bold blue)(%an)%Creset' --abbrev-commit
-  release-tags = ! git tag --sort=-creatordate | grep 'release-'
-  last-release-tag = ! git release-tags | head -n 1
-  previous-release-tag = ! git release-tags | head -n 2 | tail -n 1
-  latest-release-notes = ! git release-notes "$(git previous-release-tag)".."$(git last-release-tag)"
-  readable-latest-release-notes = ! git readable-release-notes "$(git previous-release-tag)".."$(git last-release-tag)"
+  # hub extensions
+  pr = pull-request
+  purr = ! git pu && hub pull-request
 
-  #mac
-  copy-latest-release-notes = ! git latest-release-notes | pbcopy
-
-  #hub extensions
-  pr = ! hub pull-request
-  purr = ! git pu & hub pull-request
+  # revert only file permission changes
   permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 
-  #heyjobs specific
-  prr = pull-request -l \"ready for review\" -a carlossless
+[credential]
+  helper = osxkeychain
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+  process = git-lfs filter-process
+
+[includeIf "gitdir:Projects/HeyJobs/**"]
+  path = ~/dotfiles/git/heyjobs.gitconfig
+
+[includeIf "gitdir:Projects/Delanoir/**"]
+  path = ~/dotfiles/git/delanoir.gitconfig

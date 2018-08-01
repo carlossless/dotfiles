@@ -19,3 +19,29 @@ dotfiles-deps () {
 ts2date () {
   perl -e "print scalar localtime($1 / 1000)"
 }
+
+clip-key () {
+  cat $HOME/.ssh/id_rsa.pub | pbcopy
+}
+
+# git
+
+git-replace-email () {
+  if [ -z "$1" ] || [ -z "$2" ]; then
+    echo 'Wrong arguments supplied'
+    return 1
+  fi
+  git filter-branch -f --env-filter '
+  OLD_EMAIL="$1"
+  CORRECT_NAME="Your Correct Name"
+  CORRECT_EMAIL="$2"
+  if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+  then
+      export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+  fi
+  if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+  then
+      export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+  fi
+  ' --tag-name-filter cat -- --branches --tags
+}
