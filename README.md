@@ -4,7 +4,7 @@ Currently meant only for personal syncing purposes. Setup is done through the fo
 
 ## symlink.sh
 
-Creates symlinks for every 'dot' configuration file (eg. `.zshrc`) from wherever this repository repository resides to the user home directory `~/`.
+Creates symlinks for every 'dot' configuration file (eg. `.zshrc`) from wherever this repository resides to the user home directory `~/`.
 
 ## dependencies.sh
 
