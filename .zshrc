@@ -15,14 +15,17 @@ export LANG=en_US.UTF-8
 # PATH
 [ -f "/usr/libexec/path_helper" ] && eval `/usr/libexec/path_helper -s`
 
+# iTerm
+test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
+
+# travis-ci
+[ -f /Users/carlossless/.travis/travis.sh ] && source /Users/carlossless/.travis/travis.sh
+
 # usability
 source "$SCRIPT_DIR/key_bindings.zsh"
 source "$SCRIPT_DIR/completions.zsh"
 source "$SCRIPT_DIR/aliases.zsh"
 source "$SCRIPT_DIR/utils.zsh"
 source "$SCRIPT_DIR/exports.zsh"
-
-# added by travis gem
-[ -f /Users/carlossless/.travis/travis.sh ] && source /Users/carlossless/.travis/travis.sh
 
 
