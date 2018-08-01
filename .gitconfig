@@ -1,6 +1,7 @@
 [user]
 	name = Karolis Stasaitis
 	email = contact@carlossless.io
+  signingKey = 30BBC79DB4891D4D0CC9718A2EECC8FA302A72F5!
 
 [core]
   excludesfile = ~/.gitignore.global
