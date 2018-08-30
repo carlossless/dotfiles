@@ -48,6 +48,9 @@ command_absent? bfg && brew install bfg
 # mas - cli for Mac App Store
 command_absent? mas && brew install mas
 
+# exa
+command_absent? exa && brew install exa
+
 # htop
 command_absent? htop && brew install htop
 

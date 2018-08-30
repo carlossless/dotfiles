@@ -3,7 +3,7 @@
 
 [alias]
   # hub workflow
-  prr = pull-request -l \"ready for review\" -a carlossless
+  prr = pull-request -a carlossless
 
   # releases
   release-date = ! git tag release-$(date +%Y-%m-%d)

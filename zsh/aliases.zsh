@@ -15,3 +15,6 @@ alias dad='cowsay "$(curl -sL -H "Accept: text/plain" icanhazdadjoke.com)"'
 
 # dokku
 alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
+
+# exa
+alias ls='exa'

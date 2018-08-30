@@ -23,5 +23,6 @@
     "editor.autoIndent": false,
     "vim.autoindent": false,
     "flow.useNPMPackagedFlow": true,
-    "editor.fontSize": 12
+    "editor.fontSize": 12,
+    "vsicons.dontShowNewVersionMessage": true
 }

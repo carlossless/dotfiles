@@ -12,6 +12,7 @@ export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 
 # go
 export GOPATH="$HOME/Projects/go"
+export PATH="$GOPATH/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
