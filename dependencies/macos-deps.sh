@@ -78,6 +78,9 @@ command_absent? kdig && brew install knot-resolver
 # docker
 application_absent? Docker && brew cask install docker
 
+# Dropox
+application_absent? Dropbox && brew cask install dropbox
+
 # Keka
 application_absent? Keka && brew cask install keka
 
@@ -142,7 +145,13 @@ application_absent? Kicad/kicad && brew cask install kicad
 application_absent? Bonjeff && brew cask install bonjeff
 
 # 1Password
-application_absent? 1Password && mas install 443987910
+application_absent? "1Password 7" && brew cask install 1password
+
+# Transmit
+application_absent? Transmit && brew cask install transmit
+
+# VMware Fussion
+application_absent? "VMware Fussion" && brew cask install vmware-fussion
 
 # Xcode
 application_absent? Xcode && mas install 497799835
@@ -169,7 +178,6 @@ application_absent? Slack && mas install 803453959
 font_absent? FiraCode-Regular.otf && brew tap caskroom/fonts && brew cask install font-fira-code
 
 # Brew Cleanup
-brew cask cleanup
 brew cleanup
 
 exit 0
