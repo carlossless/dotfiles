@@ -75,6 +75,9 @@ command_absent? wine && brew install wine
 # Knot Resolver
 command_absent? kdig && brew install knot-resolver
 
+# iTerm
+application_absent? iTerm && brew install iterm
+
 # docker
 application_absent? Docker && brew cask install docker
 
