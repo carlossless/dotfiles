@@ -151,7 +151,7 @@ application_absent? "1Password 7" && brew cask install 1password
 application_absent? Transmit && brew cask install transmit
 
 # VMware Fussion
-application_absent? "VMware Fussion" && brew cask install vmware-fussion
+application_absent? "VMware Fusion" && brew cask install vmware-fusion
 
 # Xcode
 application_absent? Xcode && mas install 497799835
