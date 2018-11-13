@@ -24,5 +24,7 @@
     "vim.autoindent": false,
     "flow.useNPMPackagedFlow": true,
     "editor.fontSize": 12,
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "window.nativeTabs": true
 }

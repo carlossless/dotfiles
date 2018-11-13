@@ -42,8 +42,12 @@
   bs = branch --sort=-committerdate
 
   # hub extensions
-  pr = pull-request
-  purr = ! git pu && hub pull-request
+  cpr = pull-request # create pull-request
+  pcp = ! git pu && hub pull-request # push and create pull-request
+
+  # releases
+  release-date = ! git tag release-$(date +%Y-%m-%d)
+  release-datetime = ! git tag release-$(date +%Y-%m-%d.%H-%M)
 
   # revert only file permission changes
   permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply

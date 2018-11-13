@@ -3,11 +3,10 @@
 
 [alias]
   # hub workflow
-  prr = pull-request -a carlossless
+  cpr = pull-request -a carlossless # create pull-request
+  cprwip = pull-request -a carlossless -l WIP # create pull-request
 
   # releases
-  release-date = ! git tag release-$(date +%Y-%m-%d)
-  release-datetime = ! git tag release-$(date +%Y-%m-%d.%H-%M)
   release-notes = log --color --graph --pretty=format:'%h %s (%an)' --abbrev-commit
   readable-release-notes = log --color --graph --pretty=format:'%Cred%h%Creset %s %C(bold blue)(%an)%Creset' --abbrev-commit
   release-tags = ! git tag --sort=-creatordate | grep 'release-'

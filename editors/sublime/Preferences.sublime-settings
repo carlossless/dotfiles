@@ -5,6 +5,7 @@
 	"ignored_packages":
 	[
 		"JavaScript",
+		"Rust",
 		"Vintage"
 	],
 	"show_encoding": true,

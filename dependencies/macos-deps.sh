@@ -72,6 +72,9 @@ application_absent? "Utilities/XQuartz" && brew cask install xquartz
 # wine (depends on xquartz)
 command_absent? wine && brew install wine
 
+# Knot Resolver
+command_absent? kdig && brew install knot-resolver
+
 # docker
 application_absent? Docker && brew cask install docker
 
@@ -137,9 +140,6 @@ application_absent? Kicad/kicad && brew cask install kicad
 
 # Bonjeff
 application_absent? Bonjeff && brew cask install bonjeff
-
-# Hopper
-application_absent? "Hopper Disassembler v4" && brew cask install hopper-disassembler
 
 # 1Password
 application_absent? 1Password && mas install 443987910
