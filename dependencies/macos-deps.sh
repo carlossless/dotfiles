@@ -105,6 +105,9 @@ application_absent? "Alfred 3" && brew cask install alfred
 # Sublime Text
 application_absent? "Sublime Text" && brew cask install sublime-text
 
+# Visual Studio Code
+application_absent? "Visual Studio Code" && brew cask install visual-studio-code
+
 # Sketch
 application_absent? Sketch && brew cask install sketch
 
