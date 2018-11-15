@@ -1,0 +1,43 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Advanced CSV",
+		"Babel",
+		"Base Encoder",
+		"CSV",
+		"Dockerfile Syntax Highlighting",
+		"Flow",
+		"Git",
+		"Git Config",
+		"GitGutter",
+		"Google Spell Check",
+		"HexViewer",
+		"HTMLBeautify",
+		"Jest",
+		"JsPrettier",
+		"MarkdownPreview",
+		"Package Control",
+		"Path Tools",
+		"PEG.js",
+		"Pretty JSON",
+		"Pug",
+		"RSpec",
+		"Rust Enhanced",
+		"Sass",
+		"SideBarEnhancements",
+		"StandardFormat",
+		"SublimeLinter",
+		"SublimeLinter-contrib-standard",
+		"Swift",
+		"SwiftKitten",
+		"Terminal",
+		"Vintageous",
+		"Virtualenv",
+		"ZSH"
+	]
+}
