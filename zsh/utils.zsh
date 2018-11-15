@@ -3,16 +3,26 @@ _DOTFILE_DIR="$(dirname "$(readlink "$HOME/.zshrc")")"
 # dotfiles
 
 dotfiles-open () {
-    open "$_DOTFILE_DIR"
+  open "$_DOTFILE_DIR"
 }
 
 dotfiles-edit () {
-    ${=EDITOR} "$_DOTFILE_DIR"
+  ${=EDITOR} "$_DOTFILE_DIR"
 }
 
 dotfiles-deps () {
-    eval "$_DOTFILE_DIR/dependencies.sh"
+  eval "$_DOTFILE_DIR/dependencies.sh"
 }
+
+# vscode
+vscode-backup-extensions () {
+  code --list-extensions > "$_DOTFILE_DIR/editors/vscode/extensions"
+}
+
+vscode-restore-extensions () {
+  cat "$_DOTFILE_DIR/editors/vscode/extensions" | xargs -L 1 code --install-extension
+}
+
 
 # helper functions
 
