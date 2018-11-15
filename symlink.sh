@@ -23,8 +23,8 @@ check_and_delete () {
 }
 
 symlink_file() {
-  printf "Symlinking "$2" to "$1"\n"
-  ln -s "$1" "$2"
+  printf "Symlinking \"$2\" to \"$1\"\n"
+  ln -siF "$1" "$2"
 }
 
 try_symlink () {
@@ -61,7 +61,7 @@ if [[ $(uname) == "Darwin" ]]; then
 
   # sublime text
   if [ -d "$HOME/Library/Application Support/Sublime Text 3" ]; then
-    try_home_symlink "editors/sublime" "Library/Application Support/Sublime Text 3/Packages/User"
+    try_home_symlink "editors/sublime/User" "Library/Application Support/Sublime Text 3/Packages"
   else
     printf "Skipping sublime settings, '$HOME/Library/Application Support/Sublime Text 3' not found\n"
   fi

@@ -1,5 +1,8 @@
+# gnupg tty
+export GPG_TTY=$(tty)
+
 # editor
-export EDITOR="subl -w"
+export EDITOR="vim"
 
 # user bin
 export PATH="$HOME/bin:$PATH"
