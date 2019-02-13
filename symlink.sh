@@ -5,17 +5,17 @@ set -o pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-delete_file () {
+delete_at_path () {
   printf "Deleting $1\n"
-  rm "$1"
+  rm -ri "$1"
 }
 
 check_and_delete () {
-  if [ -f "$1" ] || [ -L "$1" ]; then
+  if [ -f "$1" ] || [ -d "$1" ] || [ -L "$1" ]; then
     printf "\n$1 already exists.\n"
     read -p "Do you want to delete it? (y/N): " confirmation
     case "$confirmation" in
-      [yY] | [yY][eE][sS]) delete_file "$1"; return 0 ;;
+      [yY] | [yY][eE][sS]) delete_at_path "$1"; return 0 ;;
       *) printf "Skipped $1\n"; return 1 ;;
     esac
   fi
@@ -24,7 +24,7 @@ check_and_delete () {
 
 symlink_file() {
   printf "Symlinking \"$2\" to \"$1\"\n"
-  ln -siF "$1" "$2"
+  ln -sinF "$1" "$2"
 }
 
 try_symlink () {
