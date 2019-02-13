@@ -39,8 +39,9 @@ defaults write com.apple.Siri StatusMenuVisible -bool false
 # Gatekeeper
 sudo spctl --master-disable
 
-# Sublime Text Key Repeat (for vi mode)
+# Text Editor Key Repeat (for vi mode)
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 # AirDrop over Ethernet 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
