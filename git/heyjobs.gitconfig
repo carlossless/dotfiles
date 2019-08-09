@@ -3,8 +3,8 @@
 
 [alias]
   # hub workflow
-  cpr = pull-request -a carlossless # create pull-request
-  cprwip = pull-request -a carlossless -l WIP # create pull-request
+  cpr = ! hub pull-request -a carlossless # create pull-request
+  cprwip = cpr -l WIP # create pull-request 
 
   # releases
   release-notes = log --color --graph --pretty=format:'%h %s (%an)' --abbrev-commit

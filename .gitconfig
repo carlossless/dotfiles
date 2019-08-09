@@ -42,8 +42,9 @@
   bs = branch --sort=-committerdate
 
   # hub extensions
-  cpr = pull-request # create pull-request
-  pcp = ! git pu && hub pull-request # push and create pull-request
+  cpr = ! hub pull-request # create pull-request
+  dpr = cpr -d # create a draft pull-request
+  pcp = ! git pu && git cpr # push and create pull-request
 
   # releases
   release-date = ! git tag release-$(date +%Y-%m-%d)

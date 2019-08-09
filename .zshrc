@@ -21,11 +21,19 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 # travis-ci
 [ -f /Users/carlossless/.travis/travis.sh ] && source /Users/carlossless/.travis/travis.sh
 
+# autoenv
+source "$(brew --prefix)/opt/autoenv/activate.sh"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 # usability
 source "$SCRIPT_DIR/key_bindings.zsh"
 source "$SCRIPT_DIR/completions.zsh"
 source "$SCRIPT_DIR/aliases.zsh"
 source "$SCRIPT_DIR/utils.zsh"
 source "$SCRIPT_DIR/exports.zsh"
-
-
