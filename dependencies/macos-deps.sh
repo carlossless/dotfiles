@@ -69,14 +69,8 @@ command_absent? lsusb && brew install lsusb
 # xquartz
 application_absent? "Utilities/XQuartz" && brew cask install xquartz
 
-# wine (depends on xquartz)
-command_absent? wine && brew install wine
-
-# Knot Resolver
-command_absent? kdig && brew install knot-resolver
-
 # iTerm
-application_absent? iTerm && brew install cask iterm2
+application_absent? iTerm && brew cask install iterm2
 
 # docker
 application_absent? Docker && brew cask install docker
