@@ -14,7 +14,6 @@ export LANG=en_US.UTF-8
 # iTerm
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
-# config
 source "$SCRIPT_DIR/key_bindings.zsh"
 source "$SCRIPT_DIR/completions.zsh"
 source "$SCRIPT_DIR/aliases.zsh"

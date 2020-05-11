@@ -1,7 +1,6 @@
 {
     "explorer.confirmDelete": false,
     "rust.mode": "rls",
-    "workbench.iconTheme": "vscode-icons",
     "rust.rustup": {
         "toolchain": "nightly-x86_64-apple-darwin",
         "nightlyToolchain": "nightly-x86_64-apple-darwin"
@@ -24,7 +23,8 @@
     "vim.autoindent": false,
     "flow.useNPMPackagedFlow": true,
     "editor.fontSize": 12,
-    "vsicons.dontShowNewVersionMessage": true,
     "terminal.external.osxExec": "iTerm.app",
-    "window.nativeTabs": true
+    "window.nativeTabs": true,
+    "window.zoomLevel": 0,
+    "javascript.validate.enable": false
 }
