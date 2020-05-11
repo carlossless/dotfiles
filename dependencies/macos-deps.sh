@@ -69,20 +69,20 @@ command_absent? lsusb && brew install lsusb
 # xquartz
 application_absent? "Utilities/XQuartz" && brew cask install xquartz
 
-# wine (depends on xquartz)
-command_absent? wine && brew install wine
-
 # Knot Resolver
 command_absent? kdig && brew install knot-resolver
 
 # iTerm
-application_absent? iTerm && brew install cask iterm2
+application_absent? iTerm && brew cask install iterm2
 
 # docker
 application_absent? Docker && brew cask install docker
 
 # Dropox
 application_absent? Dropbox && brew cask install dropbox
+
+# Syncthing
+application_absent? Syncthing && brew cask install syncthing
 
 # Keka
 application_absent? Keka && brew cask install keka
@@ -100,7 +100,7 @@ application_absent? "Google Chrome" && brew cask install google-chrome
 application_absent? UninstallPKG && brew cask install uninstallpkg
 
 # Alfred
-application_absent? "Alfred 3" && brew cask install alfred
+application_absent? "Alfred 4" && brew cask install alfred
 
 # Sublime Text
 application_absent? "Sublime Text" && brew cask install sublime-text
@@ -179,6 +179,9 @@ application_absent? Deliveries && mas install 924726344
 
 # Slack
 application_absent? Slack && mas install 803453959
+
+# Wireguard
+application_absent? Wireguard && mas install 1451685025
 
 # Fira Code
 font_absent? FiraCode-Regular.otf && brew tap caskroom/fonts && brew cask install font-fira-code
