@@ -23,3 +23,7 @@ bindkey -s "^[Oo" "/"
 # Alt-Word Traversing
 bindkey "[C" forward-word
 bindkey "[D" backward-word
+
+# History Substring Search
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down

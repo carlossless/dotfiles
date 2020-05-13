@@ -1,8 +1,21 @@
 # get symlinked script directory
 SCRIPT_DIR="$(dirname "$(readlink "$HOME/.zshrc")")/zsh"
 
+# win title (starship)
+function set_win_title(){
+    echo -ne "\033]0; $PWD \007"
+}
+precmd_functions+=(set_win_title)
+
 # starship
+export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# history-substring-search
+[ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # ENV
 export LC_ALL=en_US.UTF-8

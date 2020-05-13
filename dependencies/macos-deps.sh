@@ -9,7 +9,7 @@ print_and_return () {
 }
 
 tapped? () {
-  ! brew tap | grep "$1" > /dev/null || print_and_return $? "Command $1 found. Skipping."
+  ! brew tap | grep "$1" > /dev/null || print_and_return $? "Tap $1 is already tapped. Skipping."
 }
 
 command_absent? () {
@@ -24,14 +24,27 @@ font_absent? () {
   ! [ -f "/Library/Fonts/$1" ] && ! [ -f "$HOME/Library/Fonts/$1" ] || print_and_return $? "Font $1 found. Skipping."
 }
 
+file_absent? () {
+  ! [ -f "$1" ] || print_and_return $? "File $1 found. Skipping."
+}
+
+# Homebrew
+command_absent? brew && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # osx-cross
 tapped? osx-cross/avr && brew tap osx-cross/avr
 
 # lsusb
 tapped? jlhonora/lsusb && brew tap jlhonora/lsusb
 
-# Homebrew
-command_absent? brew && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# fonts
+tapped? homebrew/cask-fonts && brew tap homebrew/cask-fonts
+
+# zsh-history-substring-search
+file_absent? /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh && brew install zsh-history-substring-search
+
+# fzf - fuzzy search
+command_absent? fzf && brew install fzf
 
 # youtube-dl
 command_absent? youtube-dl && brew install youtube-dl
@@ -184,7 +197,10 @@ application_absent? Slack && mas install 803453959
 application_absent? Wireguard && mas install 1451685025
 
 # Fira Code
-font_absent? FiraCode-Regular.otf && brew tap caskroom/fonts && brew cask install font-fira-code
+font_absent? FiraCode-Regular.otf && brew cask install font-fira-code
+
+# Nerd Font
+font_absent? "Fira Code Regular Nerd Font Complete.otf" && brew cask install font-firacode-nerd-font
 
 # Brew Cleanup
 brew cleanup
