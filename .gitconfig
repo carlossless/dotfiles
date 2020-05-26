@@ -35,6 +35,7 @@
   unstage = reset --
 
   # commonly used
+  latest-branches = ! git reflog | egrep -io \"moving from ([^[:space:]]+)\" | awk '{ print $3 }' | awk ' !x[$0]++' | egrep -v '^[a-f0-9]{40}$' | head -n5
   rpd = pull origin develop --rebase
   pu = push -u
   undo-commit = reset --hard "HEAD^"
@@ -51,7 +52,7 @@
   release-datetime = ! git tag release-$(date +%Y-%m-%d.%H-%M)
 
   # revert only file permission changes
-  permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+  permission-reset = ! git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 
 [credential]
   helper = osxkeychain
