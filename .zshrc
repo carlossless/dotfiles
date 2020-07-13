@@ -35,3 +35,7 @@ source "$SCRIPT_DIR/exports.zsh"
 
 # untested, staged shell configs
 ! [ -f "$SCRIPT_DIR/staged.zsh" ] || source "$SCRIPT_DIR/staged.zsh"
+if [ -e /home/carlossless/.nix-profile/etc/profile.d/nix.sh ]; then . /home/carlossless/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+export IDF_PATH="$HOME/Projects/esp/esp-idf"
+
+alias loadidf='. ~/Projects/esp/esp-idf/export.sh'
