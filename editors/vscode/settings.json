@@ -26,5 +26,8 @@
     "terminal.external.osxExec": "iTerm.app",
     "window.nativeTabs": true,
     "window.zoomLevel": 0,
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "javascript.format.enable": false,
+    "typescript.validate.enable": false,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
