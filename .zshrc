@@ -27,6 +27,13 @@ export LANG=en_US.UTF-8
 # iTerm
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
+# zplug
+# source ~/.zplug/init.zsh
+# zplug "Tarrasch/zsh-autoenv"
+# zplug load
+
+# source $(brew --prefix autoenv)/activate.sh
+
 source "$SCRIPT_DIR/key_bindings.zsh"
 source "$SCRIPT_DIR/completions.zsh"
 source "$SCRIPT_DIR/aliases.zsh"
