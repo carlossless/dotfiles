@@ -38,6 +38,9 @@ directory_absent? "$HOME/.jabba" && curl -sL https://github.com/shyiko/jabba/raw
 # vim-plug
 file_absent? "$HOME/.vim/autoload/plug.vim" && curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && vim +PlugInstall +qall
 
+# zplug
+directory_absent? "$HOME/.zplug" && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+
 # dokku-client
 directory_absent? "$HOME/.dokku" && git clone git@github.com:dokku/dokku.git "$HOME/.dokku"
 

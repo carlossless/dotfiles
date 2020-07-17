@@ -56,10 +56,10 @@
 
 [credential]
   helper = osxkeychain
-[commit]
-  gpgsign = true
-[gpg]
-  program = gpg
+#[commit]
+#  gpgsign = true
+#[gpg]
+#  program = gpg
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
@@ -70,5 +70,5 @@
 [includeIf "gitdir:Projects/HeyJobs/**"]
   path = ~/dotfiles/git/heyjobs.gitconfig
 
-[includeIf "gitdir:Projects/Delanoir/**"]
+[includeIf "gitdir:Projects/delanoir/**"]
   path = ~/dotfiles/git/delanoir.gitconfig

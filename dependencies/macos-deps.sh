@@ -64,6 +64,9 @@ command_absent? mas && brew install mas
 # exa
 command_absent? exa && brew install exa
 
+# rg
+command_absent? rg && brew install ripgrep
+
 # htop
 command_absent? htop && brew install htop
 

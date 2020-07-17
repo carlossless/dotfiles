@@ -29,5 +29,8 @@
     "javascript.validate.enable": false,
     "cmake.configureOnOpen": true,
     "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": true
+    "editor.renderControlCharacters": true,
+    "javascript.format.enable": false,
+    "typescript.validate.enable": false,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }

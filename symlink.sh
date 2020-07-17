@@ -50,6 +50,11 @@ try_home_symlink ".starship"
 try_home_symlink "editors/.vimrc" ".vimrc"
 
 try_home_symlink "." "dotfiles" # needed for .gitconfig includeIf
+try_home_symlink "." "dotfiles"
+
+if [[ $(uname) == "Linux" ]]; then
+  try_home_symlink ".i3"
+fi
 
 if [[ $(uname) == "Darwin" ]]; then
   # vscode

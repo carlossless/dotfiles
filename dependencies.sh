@@ -9,4 +9,8 @@ if [[ $(uname) == "Darwin" ]]; then
   eval "$SCRIPT_DIR/dependencies/macos-deps.sh"
 fi
 
+if [[ $(uname) == "Linux" ]]; then
+  eval "$SCRIPT_DIR/dependencies/linux-deps.sh"
+fi
+
 eval "$SCRIPT_DIR/dependencies/shared-deps.sh"
