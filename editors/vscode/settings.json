@@ -26,5 +26,8 @@
     "terminal.external.osxExec": "iTerm.app",
     "window.nativeTabs": true,
     "window.zoomLevel": 0,
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "cmake.configureOnOpen": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": true
 }
