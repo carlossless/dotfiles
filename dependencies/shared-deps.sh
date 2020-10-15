@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-set -o errexit
-set -o pipefail
+set -euo pipefail
 
 print_and_return () {
   echo "$2"

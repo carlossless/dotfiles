@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-set -o errexit
-set -o pipefail
+set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 delete_at_path () {
   printf "Deleting $1\n"
-  rm -ri "$1"
+  rm -r "$1"
 }
 
 check_and_delete () {
@@ -32,7 +31,7 @@ try_symlink () {
 }
 
 try_home_symlink () {
-  if [ -z "$2" ]; then
+  if [ -z "${2-}" ]; then
     try_symlink "$1" "$HOME/$1"
   else
     try_symlink "$1" "$HOME/$2"
@@ -50,13 +49,16 @@ try_home_symlink ".starship"
 try_home_symlink "editors/.vimrc" ".vimrc"
 
 try_home_symlink "." "dotfiles" # needed for .gitconfig includeIf
-try_home_symlink "." "dotfiles"
 
 if [[ $(uname) == "Linux" ]]; then
   try_home_symlink ".i3"
 fi
 
 if [[ $(uname) == "Darwin" ]]; then
+  # yabai and skhdrc
+  try_home_symlink "yabai/.yabairc" ".yabairc"
+  try_home_symlink "yabai/.skhdrc" ".skhdrc"
+
   # vscode
   if [ -d "$HOME/Library/Application Support/Code" ]; then
     try_home_symlink "editors/vscode/settings.json" "Library/Application Support/Code/User/settings.json"

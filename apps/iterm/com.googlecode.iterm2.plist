@@ -287,9 +287,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 786 620 392 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>560 0 815 702 0 0 2560 1440 </string>
+	<string>95 7 1235 800 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 78 570 402 0 0 2560 1440 </string>
+	<string>0 47 570 402 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -949,6 +949,7 @@
 	<array>
 		<string>3.3.9</string>
 		<string>3.3.11</string>
+		<string>3.3.12</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -960,9 +961,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>ED693EF5-747D-4BD2-AC4B-DE093D9AECFA</string>
 	<key>NoSyncLastTipTime</key>
-	<real>615391183.54801404</real>
+	<real>616589097.640674</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>8</integer>
+	<integer>16</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>612899566.82250905</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -1701,31 +1702,43 @@
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>612177520.99497795</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>0010</string>
+		<string>0026</string>
 		<string>0015</string>
 		<string>0004</string>
+		<string>0030</string>
 		<string>0009</string>
+		<string>0024</string>
 		<string>0013</string>
 		<string>0002</string>
+		<string>0029</string>
 		<string>0018</string>
 		<string>0007</string>
+		<string>0022</string>
 		<string>0011</string>
 		<string>0000</string>
+		<string>0027</string>
 		<string>0016</string>
 		<string>0005</string>
 		<string>0020</string>
+		<string>0025</string>
 		<string>0014</string>
 		<string>0003</string>
 		<string>0019</string>
 		<string>0008</string>
+		<string>0023</string>
 		<string>0012</string>
 		<string>0001</string>
 		<string>000</string>
 		<string>0017</string>
 		<string>0006</string>
+		<string>0028</string>
 		<string>0021</string>
+		<string>0031</string>
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
@@ -1775,15 +1788,15 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-07-03T11:22:39Z</date>
+	<date>2020-08-10T21:47:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>105021756</integer>
 	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
-	<key>ShowFullScreenTabBar</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SoundForEsc</key>
@@ -1797,7 +1810,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.11</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

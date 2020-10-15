@@ -1,6 +1,10 @@
 # get symlinked script directory
 SCRIPT_DIR="$(dirname "$(readlink "$HOME/.zshrc")")/zsh"
 
+# LANG
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # win title (starship)
 function set_win_title(){
     echo -ne "\033]0; $PWD \007"
@@ -17,22 +21,11 @@ eval "$(starship init zsh)"
 # history-substring-search
 [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# ENV
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 # setup PATH
 [ -f "/usr/libexec/path_helper" ] && eval `/usr/libexec/path_helper -s`
 
 # iTerm
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
-
-# zplug
-# source ~/.zplug/init.zsh
-# zplug "Tarrasch/zsh-autoenv"
-# zplug load
-
-# source $(brew --prefix autoenv)/activate.sh
 
 source "$SCRIPT_DIR/key_bindings.zsh"
 source "$SCRIPT_DIR/completions.zsh"
