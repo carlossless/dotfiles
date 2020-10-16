@@ -1,3 +1,6 @@
+# vi mode
+bindkey -v
+
 # 0 . Enter
 bindkey -s "^[Op" "0"
 bindkey -s "^[Ol" "."
