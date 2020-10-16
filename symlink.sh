@@ -58,6 +58,7 @@ if [[ $(uname) == "Darwin" ]]; then
   # yabai and skhdrc
   try_home_symlink "yabai/.yabairc" ".yabairc"
   try_home_symlink "yabai/.skhdrc" ".skhdrc"
+  try_home_symlink "karabiner" ".config/karabiner"
 
   # vscode
   if [ -d "$HOME/Library/Application Support/Code" ]; then
