@@ -42,6 +42,7 @@ sudo spctl --master-disable
 # Text Editor Key Repeat (for vi mode)
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write md.obsidian ApplePressAndHoldEnabled -bool false
 
 # AirDrop over Ethernet 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
