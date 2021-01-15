@@ -36,10 +36,7 @@ defaults write com.apple.dock autohide -bool true
 # Siri
 defaults write com.apple.Siri StatusMenuVisible -bool false
 
-# Gatekeeper
-sudo spctl --master-disable
-
-# Text Editor Key Repeat (for vi mode)
+# Text Editor Key Repeat
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write md.obsidian ApplePressAndHoldEnabled -bool false
@@ -47,8 +44,12 @@ defaults write md.obsidian ApplePressAndHoldEnabled -bool false
 # AirDrop over Ethernet 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-# No .DS_Store files on network stores
+# No .DS_Store files on network stores and usb drives
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Gatekeeper
+sudo spctl --master-disable
 
 # Restart Finder
 killall Finder
