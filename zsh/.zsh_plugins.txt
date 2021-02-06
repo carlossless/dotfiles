@@ -1,0 +1,8 @@
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+ohmyzsh/ohmyzsh path:plugins/fzf
+
+lukechilds/zsh-nvm # lazy loaded nvm with management functions

@@ -5,6 +5,16 @@ SCRIPT_DIR="$(dirname "$(readlink "$HOME/.zshrc")")/zsh"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# zsh config
+setopt no_beep
+setopt auto_cd
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt append_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt share_history
+
 # win title (starship)
 function set_win_title(){
     echo -ne "\033]0; $PWD \007"
@@ -15,11 +25,12 @@ precmd_functions+=(set_win_title)
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export NVM_LAZY_LOAD=true
 
-# history-substring-search
-[ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+# antibody
+source "${SCRIPT_DIR}/.zsh_plugins.sh"
+
+zstyle ':completion:*' menu select
 
 # setup PATH
 [ -f "/usr/libexec/path_helper" ] && eval `/usr/libexec/path_helper -s`

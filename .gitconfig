@@ -67,8 +67,8 @@
   required = true
   process = git-lfs filter-process
 
-[includeIf "gitdir:Projects/HeyJobs/**"]
-  path = ~/dotfiles/git/heyjobs.gitconfig
+[includeIf "gitdir:Projects/heyjobs/**"]
+ path = ~/dotfiles/git/heyjobs.gitconfig
 
 [includeIf "gitdir:Projects/delanoir/**"]
-  path = ~/dotfiles/git/delanoir.gitconfig
+ path = ~/dotfiles/git/delanoir.gitconfig

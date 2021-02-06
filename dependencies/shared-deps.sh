@@ -22,6 +22,9 @@ file_absent? () {
 # starship
 command_absent? starship && curl -fsSL https://starship.rs/install.sh | bash
 
+# antibody
+command_absent? antibody && curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
+
 # nvm
 directory_absent? "$HOME/.nvm" && curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 

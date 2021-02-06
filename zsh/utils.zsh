@@ -23,6 +23,10 @@ vscode-restore-extensions () {
   cat "$_DOTFILE_DIR/editors/vscode/extensions" | xargs -L 1 code --install-extension
 }
 
+# antibody
+antibody-update () {
+  antibody bundle < "$_DOTFILE_DIR/zsh/.zsh_plugins.txt" > "$_DOTFILE_DIR/zsh/.zsh_plugins.sh"
+}
 
 # helper functions
 
