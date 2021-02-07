@@ -31,6 +31,16 @@ eval "$(starship init zsh)"
 # setup PATH
 [ -f "/usr/libexec/path_helper" ] && eval `/usr/libexec/path_helper -s`
 
+# init completions
+zstyle ':completion:*' menu select
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
+
+autoload -Uz compinit
+compinit
+
 # iTerm
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
@@ -47,13 +57,3 @@ source "$SCRIPT_DIR/utils.zsh"
 
 # untested, staged shell configs
 ! [ -f "$SCRIPT_DIR/staged.zsh" ] || source "$SCRIPT_DIR/staged.zsh"
-
-# init completions
-zstyle ':completion:*' menu select
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-fi
-
-autoload -Uz compinit
-compinit
