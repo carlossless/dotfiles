@@ -57,3 +57,6 @@ source "$SCRIPT_DIR/utils.zsh"
 
 # untested, staged shell configs
 ! [ -f "$SCRIPT_DIR/staged.zsh" ] || source "$SCRIPT_DIR/staged.zsh"
+
+# start direnv
+eval "$(direnv hook zsh)"
