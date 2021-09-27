@@ -25,7 +25,6 @@ function set_win_title(){
 precmd_functions+=(set_win_title)
 
 # starship
-export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
 
 # setup PATH
