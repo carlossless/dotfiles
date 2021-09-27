@@ -25,6 +25,9 @@ command_absent? starship && curl -fsSL https://starship.rs/install.sh | bash
 # antibody
 command_absent? antibody && curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
 
+# tpm
+directory_absent? "$HOME/.tmux/plugins/tpm" && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # nvm
 directory_absent? "$HOME/.nvm" && curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
@@ -32,7 +35,7 @@ directory_absent? "$HOME/.nvm" && curl -o- https://raw.githubusercontent.com/cre
 directory_absent? "$HOME/.rvm" && curl -sSL https://get.rvm.io | bash -s stable
 
 # rustup
-directory_absent? "$HOME/.cargo/bin" && curl https://sh.rustup.rs -sSf | sh
+directory_absent? "$HOME/.rustup" && curl https://sh.rustup.rs -sSf | sh
 
 # jabba
 directory_absent? "$HOME/.jabba" && curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash
