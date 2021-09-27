@@ -60,3 +60,6 @@ source "$SCRIPT_DIR/utils.zsh"
 
 # start direnv
 eval "$(direnv hook zsh)"
+
+# nix
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/etc/profile.d/nix.sh"; fi

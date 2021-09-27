@@ -6,5 +6,6 @@ zsh-users/zsh-history-substring-search
 ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/gcloud
 ohmyzsh/ohmyzsh path:plugins/aws
+ohmyzsh/ohmyzsh path:plugins/pyenv
 
 lukechilds/zsh-nvm # lazy loaded nvm with management functions

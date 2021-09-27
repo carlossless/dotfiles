@@ -4,6 +4,7 @@
 [alias]
   # hub workflow
   cpr = ! hub pull-request -a carlossless # create pull-request
+  cprd = ! hub pull-request --draft -a carlossless # create pull-request
   cprwip = cpr -l WIP # create pull-request 
 
   # releases
