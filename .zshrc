@@ -45,7 +45,11 @@ export SHOW_AWS_PROMPT=false
 export NVM_LAZY_LOAD=true
 
 # antibody
-source "$SCRIPT_DIR/.zsh_plugins.sh"
+if ! [ -f "$SCRIPT_DIR/zsh_plugins.zsh" ]; then
+  source "$HOME/.zsh_plugins.sh"
+else
+  echo "WARNING: $HOME/.zsh_plugins.sh not found - run antibody-update"
+fi
 
 source "$SCRIPT_DIR/key_bindings.zsh"
 source "$SCRIPT_DIR/aliases.zsh"
