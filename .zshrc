@@ -24,9 +24,6 @@ function set_win_title(){
 }
 precmd_functions+=(set_win_title)
 
-# starship
-eval "$(starship init zsh)"
-
 # setup PATH
 [ -f "/usr/libexec/path_helper" ] && eval `/usr/libexec/path_helper -s`
 
@@ -56,6 +53,9 @@ source "$SCRIPT_DIR/utils.zsh"
 
 # untested, staged shell configs
 ! [ -f "$SCRIPT_DIR/staged.zsh" ] || source "$SCRIPT_DIR/staged.zsh"
+
+# starship
+eval "$(starship init zsh)"
 
 # start direnv
 eval "$(direnv hook zsh)"

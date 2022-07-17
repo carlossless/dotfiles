@@ -1,13 +1,5 @@
 {
     "explorer.confirmDelete": false,
-    "rust.mode": "rls",
-    "rust.rustup": {
-        "toolchain": "nightly-x86_64-apple-darwin",
-        "nightlyToolchain": "nightly-x86_64-apple-darwin"
-    },
-    "rust.rls": {
-        "useRustfmt": true
-    },
     "editor.fontLigatures": true,
     "editor.fontFamily": "Fira Code",
     "editor.multiCursorModifier": "ctrlCmd",
@@ -44,5 +36,14 @@
     "editor.autoSurround": "never",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingDelete": "never",
-    "editor.autoClosingOvertype": "never"
+    "editor.autoClosingOvertype": "never",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin"
+    },
+    "rust.mode": "rls"
 }
