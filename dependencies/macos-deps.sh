@@ -28,7 +28,7 @@ file_absent? () {
 }
 
 # Homebrew
-command_absent? brew && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+command_absent? brew && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # osx-cross
 tapped? osx-cross/avr && brew tap osx-cross/avr
@@ -49,7 +49,7 @@ command_absent? fzf && brew install fzf
 command_absent? youtube-dl && brew install youtube-dl
 
 # java
-command_absent? java && brew cask install java
+command_absent? java && brew install java
 
 # hub - github cli interface
 command_absent? hub && brew install hub
@@ -81,104 +81,83 @@ command_absent? avr-gcc && brew install avr-gcc
 # lsusb
 command_absent? lsusb && brew install lsusb
 
-# xquartz
-application_absent? "Utilities/XQuartz" && brew cask install xquartz
-
-# Knot Resolver
-command_absent? kdig && brew install knot-resolver
-
 # iTerm
-application_absent? iTerm && brew cask install iterm2
+application_absent? iTerm && brew install iterm2
 
 # docker
-application_absent? Docker && brew cask install docker
-
-# Dropox
-application_absent? Dropbox && brew cask install dropbox
+application_absent? Docker && brew install --cask docker
 
 # Syncthing
-application_absent? Syncthing && brew cask install syncthing
+application_absent? Syncthing && brew install --cask syncthing
 
 # Keka
-application_absent? Keka && brew cask install keka
+application_absent? Keka && brew install keka
 
 # Launch Control
-application_absent? LaunchControl && brew cask install launchcontrol
+application_absent? LaunchControl && brew install launchcontrol
 
 # Firefox
-application_absent? Firefox && brew cask install firefox
+application_absent? Firefox && brew install firefox
 
 # Google Chrome
-application_absent? "Google Chrome" && brew cask install google-chrome
+application_absent? "Google Chrome" && brew install google-chrome
 
 # UninstallPKG
-application_absent? UninstallPKG && brew cask install uninstallpkg
+application_absent? UninstallPKG && brew install uninstallpkg
 
 # Alfred
-application_absent? "Alfred 4" && brew cask install alfred
+application_absent? "Alfred 5" && brew install alfred
 
 # Sublime Text
-application_absent? "Sublime Text" && brew cask install sublime-text
+application_absent? "Sublime Text" && brew install sublime-text
 
 # Visual Studio Code
-application_absent? "Visual Studio Code" && brew cask install visual-studio-code
-
-# Sketch
-application_absent? Sketch && brew cask install sketch
-
-# Skype
-application_absent? Skype && brew cask install skype
+application_absent? "Visual Studio Code" && brew install visual-studio-code
 
 # Textual
-application_absent? Textual && brew cask install textual
-
-# Beamer
-application_absent? Beamer && brew cask install beamer
+application_absent? Textual && brew install textual
 
 # Paw
-application_absent? Paw && brew cask install paw
+application_absent? Paw && brew install paw
 
 # Dash
-application_absent? Dash && brew cask install dash
+application_absent? Dash && brew install --cask dash
 
 # Trailer
-application_absent? Trailer && brew cask install trailer
+application_absent? Trailer && brew install trailer
 
 # Messenger (Facebook)
-application_absent? Messenger && brew cask install messenger
+application_absent? Messenger && brew install messenger
 
 # WhatsApp
-application_absent? WhatsApp && brew cask install whatsapp
+application_absent? WhatsApp && brew install whatsapp
+
+# Signal
+application_absent? Signal && brew install signal
 
 # Spotify
-application_absent? Spotify && brew cask install spotify
-
-# Tunnelblick
-application_absent? Tunnelblick && brew cask install tunnelblick
+application_absent? Spotify && brew install spotify
 
 # iStat Menus
-application_absent? "iStat Menus" && brew cask install istat-menus
+application_absent? "iStat Menus" && brew install istat-menus
 
 # kicad
-application_absent? Kicad/kicad && brew cask install kicad
+#application_absent? Kicad/kicad && brew install kicad
 
 # Bonjeff
-application_absent? Bonjeff && brew cask install bonjeff
+application_absent? Bonjeff && brew install bonjeff
 
 # 1Password
-application_absent? "1Password 7" && brew cask install 1password
+application_absent? "1Password" && brew install 1password
 
 # Transmit
-application_absent? Transmit && brew cask install transmit
+application_absent? Transmit && brew install transmit
 
-# VMware Fussion
-application_absent? "VMware Fusion" && brew cask install vmware-fusion
+# DaisyDisk
+application_absent? DaisyDisk && brew install daisydisk
 
 # Xcode
 application_absent? Xcode && mas install 497799835
-
-# DaisyDisk
-application_absent? DaisyDisk && mas install 411643860
 
 # Tweetbot
 application_absent? Tweetbot && mas install 557168941
@@ -195,14 +174,11 @@ application_absent? Deliveries && mas install 924726344
 # Slack
 application_absent? Slack && mas install 803453959
 
-# Wireguard
-application_absent? Wireguard && mas install 1451685025
-
 # Fira Code
-font_absent? FiraCode-Regular.otf && brew cask install font-fira-code
+font_absent? FiraCode-Regular.otf && brew install font-fira-code
 
 # Nerd Font
-font_absent? "Fira Code Regular Nerd Font Complete.otf" && brew cask install font-firacode-nerd-font
+font_absent? "Fira Code Regular Nerd Font Complete.otf" && brew install font-firacode-nerd-font
 
 # Brew Cleanup
 brew cleanup
