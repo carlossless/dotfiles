@@ -21,6 +21,7 @@
 		"Jest",
 		"JsPrettier",
 		"MarkdownPreview",
+		"Nix",
 		"Package Control",
 		"Path Tools",
 		"PEG.js",
@@ -39,6 +40,6 @@
 		"Theme - El Capitan",
 		"Vintageous",
 		"Virtualenv",
-		"ZSH"
-	]
+		"ZSH",
+	],
 }
