@@ -29,7 +29,6 @@
     "editor.lineNumbers": "on",
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "on",
-    "window.zoomLevel": 1,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "diffEditor.wordWrap": "on",
