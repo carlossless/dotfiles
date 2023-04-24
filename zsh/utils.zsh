@@ -25,7 +25,8 @@ vscode-restore-extensions () {
 
 # antibody
 antibody-update () {
-  antibody bundle < "$_DOTFILE_DIR/zsh/.zsh_plugins.txt" > "$_DOTFILE_DIR/zsh/.zsh_plugins.sh"
+  antibody bundle < "$_DOTFILE_DIR/zsh/.zsh_plugins.txt" > "$HOME/.zsh_plugins.sh"
+  echo "Successfully Created $HOME/.zsh_plugins.sh"
 }
 
 # helper functions

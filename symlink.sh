@@ -72,9 +72,9 @@ if [[ $(uname) == "Darwin" ]]; then
   fi
 
   # sublime text
-  if [ -d "$HOME/Library/Application Support/Sublime Text 3" ]; then
-    try_home_symlink "editors/sublime/User" "Library/Application Support/Sublime Text 3/Packages"
+  if [ -d "$HOME/Library/Application Support/Sublime Text" ]; then
+    try_home_symlink "editors/sublime/User" "Library/Application Support/Sublime Text/Packages/User"
   else
-    printf "Skipping sublime settings, '$HOME/Library/Application Support/Sublime Text 3' not found\n"
+    printf "Skipping sublime settings, '$HOME/Library/Application Support/Sublime Text' not found\n"
   fi
 fi
