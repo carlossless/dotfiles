@@ -52,7 +52,7 @@ try_home_symlink "editors/.vimrc" ".vimrc"
 try_home_symlink "." "dotfiles" # needed for .gitconfig includeIf
 
 if [[ $(uname) == "Linux" ]]; then
-  try_home_symlink ".i3"
+  try_home_symlink ".config/i3/config"
   try_home_symlink ".xinitrc"
   try_home_symlink ".xmodmap"
 fi

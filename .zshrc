@@ -44,6 +44,11 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 export SHOW_AWS_PROMPT=false
 export NVM_LAZY_LOAD=true
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # antibody
 source "$SCRIPT_DIR/.zsh_plugins.sh"
 
