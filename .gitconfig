@@ -27,6 +27,7 @@
   ci = commit
   st = status
   br = branch
+  sw = switch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
@@ -41,6 +42,7 @@
   undo-commit = reset --hard "HEAD^"
   stage-commit = reset --soft "HEAD^"
   bs = branch --sort=-committerdate
+  bolm = ! git fetch origin master:master && git switch -c $1 master # branch off of latest master
 
   # hub extensions
   cpr = ! hub pull-request # create pull-request
