@@ -5,7 +5,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "explorer.openEditors.visible": 0,
-    "workbench.colorTheme": "Ayu Mirage Bordered",
     "editor.scrollBeyondLastLine": false,
     "workbench.startupEditor": "newUntitledFile",
     "editor.autoIndent": "none",
@@ -44,5 +43,6 @@
     "rust.rustup": {
         "toolchain": "stable-x86_64-apple-darwin"
     },
-    "rust.mode": "rls"
+    "rust.mode": "rls",
+    "cSpell.enabled": false
 }
