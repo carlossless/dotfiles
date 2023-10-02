@@ -19,8 +19,8 @@ setopt share_history
 source "$SCRIPT_DIR/exports.zsh"
 
 # win title (starship)
-function set_win_title(){
-    echo -ne "\033]0; $PWD \007"
+function set_win_title() {
+  echo -ne "\033]0; $(basename "$PWD") \007"
 }
 precmd_functions+=(set_win_title)
 
